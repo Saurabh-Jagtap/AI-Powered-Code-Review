@@ -1,41 +1,85 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Dependencies
 
-# dependencies
-/node_modules
-/.pnp
+node_modules/
+.pnp/
 .pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+.yarn/
+!.yarn/patches/
+!.yarn/plugins/
+!.yarn/releases/
+!.yarn/versions/
 
-# testing
-/coverage
+# Next.js
 
-# next.js
-/.next/
-/out/
+.next/
+out/
 
-# production
-/build
+# Production
 
-# misc
-.DS_Store
-*.pem
+build/
 
-# debug
+# Testing
+
+coverage/
+
+# Environment variables
+
+.env
+.env.*
+!.env.example
+
+# Prisma generated client
+
+/lib/generated/prisma/
+
+# AI / Editor / Agent files
+
+agents/
+claude/
+windsurf/
+.claude/
+.windsurf/
+
+# AI / Agent tooling
+.agents/
+.claude/
+.windsurf/
+
+# Vercel
+
+.vercel/
+
+# Debug logs
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env*
+# TypeScript
 
-# vercel
-.vercel
-
-# typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# OS files
+
+.DS_Store
+Thumbs.db
+
+# Certificates / keys
+
+*.pem
+
+# IDE / editor files
+
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Misc
+
+*.log
+tmp/
+temp/
+.cache/
