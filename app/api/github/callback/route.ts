@@ -19,6 +19,7 @@ export async function GET(request: Request) {
 
     if (!session) {
         const callbackUrl = buildSignInCallbackUrl(installationId)
+        redirect(`/signin?callbackUrl=${encodeURIComponent(callbackUrl)}`)
     }
 
     if (installationId) {
