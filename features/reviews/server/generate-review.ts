@@ -46,7 +46,8 @@ Then use this structure if there are findings:
 type ReviewInput = {
     repoFullName: string;
     title: string;
-    diff: string;
+    contextSnippets: string[];
+    repoContextSnippets: string[];
 };
 
 function buildRepoContextSection(repoContextSnippets: string[]) {
